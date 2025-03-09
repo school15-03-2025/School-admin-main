@@ -1,0 +1,19 @@
+.imgPrev:hover button{
+    display: block !important;
+}
+.timerTitle{
+    font-size: 6px;
+    line-height: 10px;
+}
+.timerTitle span{
+    font-size: 12px;
+}
+.colanCss{
+    line-height: 7px;
+}
+.subtitle{
+    font-size:16px;
+}
+.comingSoon{
+    font-size:10px;
+}

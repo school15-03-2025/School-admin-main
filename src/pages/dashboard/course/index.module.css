@@ -1,0 +1,13 @@
+.imgPrev:hover button{
+    display: block !important;
+}
+.timerTitle{
+    font-size: 4px;
+    line-height: 8px;
+}
+.timerTitle span{
+    font-size: 10px;
+}
+.colanCss{
+    line-height: 5px;
+}

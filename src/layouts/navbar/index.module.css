@@ -1,0 +1,12 @@
+.navMenu > li{
+    margin: 5px 10px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navMenu > li button{ 
+    font-size: 20px;
+}

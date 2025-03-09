@@ -1,0 +1,10 @@
+.navListmenu {
+    height: calc(100vh - 140px);
+    overflow: auto;
+}
+
+.navListmenu a span {
+    height: 20px;
+    width: 25px;
+    display: inline-block;
+}

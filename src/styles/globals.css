@@ -1,0 +1,223 @@
+/* Define custom CSS variables */
+:root {
+  --primary-color: #ccccff;
+  --secondary-color: #ffffff;
+  --off-white-color: #f8f6f0;
+  --off-white-yellow-color: #faefd8;
+  --summary-color: #007aff;
+  --pending-color: #ffb200;
+  --active-color: #00850d;
+  --block-color: #921313;
+  --suspend-color: #00c0cc;
+  --suspend-count-color: #322488;
+  /* --font-size-xl: 2rem;
+    --spacing-lg: 32rem; */
+}
+
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-color: var(--primary-color);
+}
+
+.bg-off-white {
+  background-color: var(--off-white-color);
+}
+
+.pending-bg,
+.comming.soon-bg {
+  background-color: var(--pending-color);
+}
+
+.active-bg,
+.accepted-bg,
+.sending-bg,
+.done-bg {
+  background-color: var(--active-color);
+}
+
+.block-bg,
+.spam-bg,
+.ineligible-bg,
+.waiting-bg,
+.expired-bg {
+  background-color: var(--block-color);
+}
+
+.suspend-bg,
+.live-bg {
+  background-color: var(--suspend-color);
+}
+
+.ongoing-bg {
+  background-color: var(--suspend-count-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+label {
+  font-size: 13px;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.clip-button {
+  position: relative;
+  clip-path: polygon(19% 0, 100% 0, 100% 60%, 85% 100%, 0 100%, 0 45%);
+  background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.recorder-container {
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  max-width: 400px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.audio-button {
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  padding: 8px 12px;
+}
+
+.audio-button:active {
+  transform: scale(0.95);
+}
+
+.recording-indicator {
+  color: rgba(39, 0, 0, 0.562);
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.recording-animation {
+  font-weight: bold;
+  margin: 5px 0;
+  animation: pulse 1s infinite;
+}
+
+.recording-animation.paused {
+  color: gray;
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.audio-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.audio-controls audio {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+
+.audio-controls .control-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.control-buttons button {
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.control-buttons button:hover {
+  background-color: #218838;
+}
+
+.control-buttons button:active {
+  transform: scale(0.95);
+}
+
+#audioUploadprogress {
+  width: 100%;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .recorder-container {
+    width: 60%;
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .recorder-container {
+    width: 90%;
+    padding: 15px;
+  }
+}

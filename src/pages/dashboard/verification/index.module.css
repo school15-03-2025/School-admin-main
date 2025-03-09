@@ -1,0 +1,19 @@
+.otpScreen input{
+    width: 60px;
+    height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    background: #F8F6F033;
+    box-shadow: 2px 2px 2px 0px #0000001A;
+    box-shadow: -2px -2px 2px 0px #0000001A;
+    backdrop-filter: blur(10px);
+    border: 0px;
+    color: #000;
+}
+
+.otpScreen input:focus, .otpScreen input:active, .otpScreen input:not(:placeholder-shown){
+    background: #fff;
+    border: 1px solid var(--Primary, #0077B6)
+}
